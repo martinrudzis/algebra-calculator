@@ -10,16 +10,31 @@ Specification
 The goal of this project is to create a symbolic algebra calculator that can evaluate and simplify algebraic expressions that are read from cin.
 
 Input
-It is assumed that input is provided in infix format. The program will read infix expressions from cin. Expressions may use any of the 26 letters of the alphabet for variables, and any of the following operators: +, -, *, /, ^. Assignment is performed using the operator :=. The calculator will not differentiate between upper and lower case; upper and lower case forms of the same letter will be treated as belonging to the same variable. The program will also detect parentheses in the input and rely on them to determine order of operations. The program ends when it reads a “.” from cin.
+It is assumed that input is provided in infix format. The program will read infix expressions from cin. Expressions may use any of the 26 letters 
+of the alphabet for variables, and any of the following operators: +, -, *, /, ^. Assignment is performed using the operator :=. The calculator 
+will not differentiate between upper and lower case; upper and lower case forms of the same letter will be treated as belonging to the same 
+variable. The program will also detect parentheses in the input and rely on them to determine order of operations. The program ends when it reads 
+a “.” from cin.
 
 Output
-The output of the program will be as follows. It will print the input that it reads in, followed by the simplified form of the output. Each new input and output will be printed on its own line and assigned an index number so that they can be easily compared. For example, if the input was “1 + 2”, it would print, “in [1]: 1 + 2.” Then it would print, “out [1]: 3”.   
+The output of the program will be as follows. It will print the input that it reads in, followed by the simplified form of the output. Each new 
+input and output will be printed on its own line and assigned an index number so that they can be easily compared. For example, if the input was 
+“1 + 2”, it would print, “in [1]: 1 + 2.” Then it would print, “out [1]: 3”.   
 
 Assumptions
-It is assumed that digits that are not separated by an operator can be concatenated into a single number. For example, 5 2 + 3 would become 52 + 3. It is also assumed that numbers and variables not separated by an operator is an invalid input. For example, “2x”, “xy”, or “3(z)” would be considered invalid. Finally, it is assumed that dangling operators without left and/or right arguments are invalid. It is also assumed that assignment inputs having more than a single left argument are invalid, for example, 2 * x := 4. Use of any of these expressions should result in an error message, but still allow program execution to continue. 
+It is assumed that digits that are not separated by an operator can be concatenated into a single number. For example, 5 2 + 3 would become 52 + 3. 
+It is also assumed that numbers and variables not separated by an operator is an invalid input. For example, “2x”, “xy”, or “3(z)” would be 
+considered invalid. Finally, it is assumed that dangling operators without left and/or right arguments are invalid. It is also assumed that 
+assignment inputs having more than a single left argument are invalid, for example, 2 * x := 4. Use of any of these expressions should result in an 
+error message, but still allow program execution to continue. 
 
 Key Algorithms
-There are several important algorithms involved with implementing this program. First, the program will need to convert infix mathematical expressions to postfix format. This process involves removing parentheses and converting the order of operators and numbers/variables such that they can be read into a tree structure and simplified. The tree structure will need an algorithm that simplifies the expression that it contains by performing operations on constants and simplifying defined variables. Finally, it will need an algorithm to convert the contents of the tree into a readable infix expression that can be printed to show the result of the simplification. The details of these algorithms are described in the Design section.
+There are several important algorithms involved with implementing this program. First, the program will need to convert infix mathematical 
+expressions to postfix format. This process involves removing parentheses and converting the order of operators and numbers/variables such that they 
+can be read into a tree structure and simplified. The tree structure will need an algorithm that simplifies the expression that it contains by 
+performing operations on constants and simplifying defined variables. Finally, it will need an algorithm to convert the contents of the tree into a 
+readable infix expression that can be printed to show the result of the simplification. The details of these algorithms are described in the Design 
+section.
 
 
 
