@@ -41,7 +41,11 @@ section.
 Design
 
 Functions
-The program driver will start by reading from cin. If the input is just a number or a variable, then it just outputs the number. However, the variable is added to the VariableStore with an empty value. If the input contains an assignment operator (:=), it will “tokenize” the right hand elements by using them to create an ITokStream, which is then read element-by-element into a series of Nodes that are stored in a vector. The program will then utilize a function to convert the infix expression to a postfix format. The implementation of this function will be as follows (note that a helper function, getPrecedence(Token), will be defined such that it returns an int corresponding to the precedence of each operator):
+The program driver will start by reading from cin. If the input is just a number or a variable, then it just outputs the number. However, the variable 
+is added to the VariableStore with an empty value. If the input contains an assignment operator (:=), it will “tokenize” the right hand elements by 
+using them to create an ITokStream, which is then read element-by-element into a series of Nodes that are stored in a vector. The program will then 
+utilize a function to convert the infix expression to a postfix format. The implementation of this function will be as follows (note that a helper 
+function, getPrecedence(Token), will be defined such that it returns an int corresponding to the precedence of each operator):
 
 */
 
